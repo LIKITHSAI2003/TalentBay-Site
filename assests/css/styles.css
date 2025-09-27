@@ -1,0 +1,49 @@
+/* assets/css/styles.css */
+
+/* Navbar logo size */
+.nav-logo {
+  height: 40px !important;   /* fixed height */
+  width: auto !important;    /* keep aspect ratio */
+  max-height: 40px !important;
+  display: block;            /* prevents inline SVG spacing issues */
+}
+
+
+
+/* Hero section logo size */
+.hero-logo {
+  width: 180px;      /* Adjust 160–220px as needed */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Hover zoom effect */
+.logo-zoom {
+  transition: transform 0.28s ease;
+  cursor: pointer;
+}
+.logo-zoom:hover {
+  transform: scale(1.08);
+}
+
+/* Modal visible state animation */
+#modal .modal-enter {
+  animation: modalIn 220ms ease;
+}
+@keyframes modalIn {
+  from { transform: translateY(8px) scale(.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Dark mode complements */
+html.dark body {
+  background-color: #0b1220;
+  color: #d1e3ff;
+}
+
+/* Utility: hide visually but keep for screen readers */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px; overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
+}
